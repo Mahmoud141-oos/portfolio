@@ -1,0 +1,175 @@
+main.flex {
+    padding: 0 var(--padding);
+    gap: 1rem;
+    align-items: start;
+}
+
+main .btns {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .btns button {
+    width: 11rem;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    opacity: 0.5;
+    border-radius: 4px;
+    background-color: #1e1f26;
+    color: #fff;
+    border: 1.5px solid #1e1f26;
+    transition: 0.4s;
+    letter-spacing: 0.04rem;
+}
+
+main .btns button:hover {
+    border: 1.5px solid var(--hover-color);
+    opacity: 1;
+}
+
+main .btns button.active {
+    border: 1.5px solid var(--hover-color);
+    font-size: 1.05rem;
+    opacity: 1;
+    font-weight: bold;
+}
+
+main .cards {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    justify-content: center;
+}
+
+main .card {
+    width: 17rem;
+    border-radius: 4px;
+    background-image: linear-gradient(#ffffff0d, #ffffff0d);
+    border: 2px solid #5dfcf44d;
+    transition: 0.4s;
+}
+
+main .card:hover {
+    scale: 1.01;
+    rotate: 1deg;
+}
+
+main .card .card-details {
+    padding: 0.7rem 0.4rem;
+}
+
+main .card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+main .card h1.title {
+    color: var(--title);
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+main .card p.sub-title {
+    color: var(--sub-title);
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+main .card .card-links {
+    padding: 0 0.2rem;
+    justify-content: space-between;
+}
+
+main .icon-links {
+    gap: 0.7rem;
+}
+
+main .icon-link {
+    color: var(--sub-title);
+    font-size: 1.4rem;
+}
+
+main .icon-link:hover {
+    color: var(--title);
+    scale: 1.1;
+}
+
+main .more-link {
+    color: var(--hover-color);
+    opacity: 0.7;
+}
+
+
+main .more-link span {
+    justify-content: center;
+    margin-left: 3px;
+}
+
+main .more-link:hover {
+    opacity: 1;
+    animation-name: more-link-animate;
+    animation-duration: 0.9s;
+    animation-play-state: running;
+}
+
+@keyframes more-link-animate {
+    0% {
+        translate: -20px;
+    }
+
+    100% {
+        translate: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    main.flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .btns {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    main .card {
+        width: 90%;
+    }
+
+    main .card h1.title {
+        font-size: 1.6rem;
+    }
+
+    main .card p.sub-title {
+        font-size: 0.9rem;
+    }
+
+    main .icon-links {
+        gap: 1rem;
+    }
+
+    main .icon-link {
+        font-size: 1.7rem;
+    }
+
+    main .more-link {
+        font-size: 1.2rem;
+    }
+
+}
+
+/* styles for light mode */
+
+.light main .btns button {
+    border: #1e1f26;
+}
+
+.light main .card {
+    border: none;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
+}

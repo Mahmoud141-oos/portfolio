@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #18181b;
+    --border: #3f3f4666;
+    --title: #fff;
+    --sub-title: #a1a1aa;
+    --bg-header: #27272a;
+    --hover-color: #00d5bd;
+    --icon-hover: #d4d4d4d8;
+    --padding: 2.4rem;
+    --blue: rgb(93, 188, 252)
+}
+
+.light {
+    --primary-color: rgb(250, 250, 250);
+    --secondary-color: rgb(255, 255, 255);
+    --border: rgba(202, 202, 202, 0.518);
+
+    --title: rgb(39 39 42);
+    --sub-title: rgb(82 82 91);
+
+    --bg-header: rgb(253, 253, 253);
+    --blue: rgb(0, 149, 246);
+
+    --icon-hover: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.03rem;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+    transition: all 0.2s ease-in-out;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    border: 2px solid red;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border);
+}
+
+
+::-webkit-scrollbar {
+    width: 0.88rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: #3d4a59;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* for Firefox */
+html {
+    scrollbar-color: #888 #3d4a59;
+}
+
+/* scrolle button */
+.scrolle2up {
+    position: fixed;
+    bottom: 3rem;
+    right: 3%;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(25, 118, 210, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.scrolle2up svg {
+    font-size: 1.89rem;
+    color: var(--title);
+}
+
+.scrolle2up:hover {
+    background-color: rgba(25, 118, 210);
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------
+-------------------------------{ Media Queries }-------------------------------
+------------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .container {
+        --padding: 1.9rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        --padding: 1.4rem;
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 13px;
+    }
+
+    .container {
+        --padding: 1rem;
+        width: 98%;
+    }
+
+    .scrolle2up {
+        width: 2.9rem;
+        height: 2.9rem;
+        opacity: 0.4;
+    }
+
+    .scrolle2up svg {
+        font-size: 1.5rem;
+    }
+
+    .scrolle2up:hover {
+        opacity: 1;
+    }
+}

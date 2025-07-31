@@ -1,0 +1,41 @@
+footer.flex {
+    margin: 4rem 0 2rem;
+    justify-content: space-between;
+    padding: 0 var(--padding);
+}
+
+footer.flex ul.flex {
+    gap: 1rem;
+}
+
+footer.flex ul.flex li {
+    transition: 0.5s;
+}
+
+footer.flex ul.flex li .link-footer {
+    font-size: 0.9rem;
+    color: var(--title);
+    letter-spacing: 0.09rem;
+    transition: 0.4s;
+}
+
+footer.flex ul.flex li:hover {
+    scale: 1.2;
+}
+
+footer.flex ul.flex li .link-footer:hover {
+    color: var(--hover-color);
+}
+
+footer.flex p.sub-title {
+    font-size: 0.9rem;
+    color: var(--sub-title);
+}
+
+@media (max-width: 800px) {
+    footer.flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "projects": [
+        {
+            "id": 1, "projectTitle": "HTML & CSS ", "category": "css", "imgPath": "/images/1.jpg"
+        },
+        {
+            "id": 2, "projectTitle": "HTML & CSS ", "category": "css", "imgPath": "/images/2.jpg"
+        },
+        {
+            "id": 3, "projectTitle": "HTML & CSS ", "category": "css", "imgPath": "/images/3.jpg"
+        },
+        {
+            "id": 4, "projectTitle": "JavaScript", "category": "js", "imgPath": "/images/4.jpg"
+        },
+        {
+            "id": 5, "projectTitle": "JavaScript", "category": "js", "imgPath": "/images/5.jpg"
+        },
+        {
+            "id": 6, "projectTitle": "JavaScript", "category": "js", "imgPath": "/images/6.jpg"
+        },
+        {
+            "id": 7, "projectTitle": "React projects", "category": "react", "imgPath": "/images/7.jpg"
+        },
+        {
+            "id": 8, "projectTitle": "React projects", "category": "react", "imgPath": "/images/8.jpg"
+        },
+        {
+            "id": 9, "projectTitle": "React projects", "category": "react", "imgPath": "/images/9.jpg"
+        },
+        {
+            "id": 10, "projectTitle": "Node & express", "category": "node", "imgPath": "/images/10.png"
+        },
+        {
+            "id": 11, "projectTitle": "Node & express", "category": "node", "imgPath": "/images/12.jpg"
+        }
+    ]
+}

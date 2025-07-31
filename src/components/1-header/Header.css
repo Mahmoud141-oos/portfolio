@@ -1,0 +1,190 @@
+/* ----------------------------------------------------------------------------
+-------------------------------{ Header Design }-------------------------------
+------------------------------------------------------------------------------- */
+header.flex {
+    padding: 1rem var(--padding);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+header nav {
+    background: var(--bg-header);
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px 40px var(--border);
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    outline: 2px solid var(--bg-header);
+    border-radius: 50%;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+div.profile-img {
+    outline: unset;
+    border-radius: unset;
+}
+
+/* ----------------------------------------------------------------------------
+--------------------------------{ Nav Design }---------------------------------
+------------------------------------------------------------------------------- */
+
+header nav ul.flex {
+    gap: 1.1rem;
+}
+
+header nav ul li a {
+    color: var(--title);
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: var(--hover-color);
+    opacity: 1;
+}
+
+.mode,
+.icon-open-menu {
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    background: var(--bg-header);
+    color: var(--title);
+    border: 2px solid var(--border);
+    box-shadow: 1px 1px 40px var(--border);
+    transition: all 0.3s ease-in-out;
+}
+
+.mode:hover,
+.icon-open-menu:hover {
+    border: 2px solid #4040462a;
+}
+
+/* ----------------------------------------------------------------------------
+-------------------------------{ Mobile  Design }-------------------------------
+------------------------------------------------------------------------------- */
+
+.open {
+    display: flex !important;
+}
+
+.close {
+    display: none !important;
+}
+
+.icon-open-menu {
+    display: none;
+}
+
+header nav ul.flex div {
+    display: none;
+}
+
+/* ----------------------------------------------------------------------------
+-------------------------------{ Media Queries }-------------------------------
+------------------------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+    /* ----------------------------------------------------------------------------
+    -------------------------------{ Mobile  Design }-------------------------------
+    ------------------------------------------------------------------------------- */
+    header nav {
+        position: fixed;
+        inset: 0;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #22232cb2;
+        backdrop-filter: blur(5px);
+        z-index: 9999;
+    }
+
+    header nav ul.flex {
+        width: 97%;
+        margin: 1rem auto;
+        height: fit-content;
+        background: var(--secondary-color);
+        flex-direction: column;
+        align-items: start;
+        gap: .9rem;
+        padding: 1.2rem;
+        border-radius: 20px;
+        animation-name: menu-animate;
+        animation-duration: 0.4s;
+    }
+
+    @keyframes menu-animate {
+        from {
+            transform: translateY(100px);
+        }
+
+        to {
+            transform: translateY(0px);
+        }
+    }
+
+    header nav ul.flex li {
+        padding-bottom: 0.9rem;
+        width: 100%;
+        border-bottom: 1.5px solid var(--border);
+    }
+
+    header nav ul.flex li:last-child {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    header nav ul.flex div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .icon-close-menu {
+        border: none;
+        background: initial;
+        outline: none;
+        font-size: 2.5rem;
+        color: red;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .icon-close-menu:hover {
+        transform: rotate(180deg);
+    }
+
+    .icon-open-menu {
+        display: flex;
+    }
+
+    .profile-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon-open-menu, .mode {
+        font-size: 1.9rem;
+        padding: 0.7rem;
+    }
+
+    header nav ul li a  {
+        font-size: 1.2rem;
+    }
+
+    header nav ul.flex div.flex h3 {
+        font-size: 2rem;
+    }
+
+    
+}

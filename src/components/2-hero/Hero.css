@@ -1,0 +1,112 @@
+/* ----------------------------------------------------------------------------
+-------------------------------{ Header Design }-------------------------------
+------------------------------------------------------------------------------- */
+
+section.hero {
+    padding: 1rem var(--padding) 0 var(--padding);
+}
+
+/* ----------------------------------------------------------------------------
+-------------------------------{ left section }--------------------------------
+------------------------------------------------------------------------------- */
+
+section.hero .left-section {
+    flex-grow: 1;
+}
+
+section.hero .parent-avatar {
+    display: flex;
+    align-items: self-end;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section.hero .avatar {
+    width: 7rem;
+}
+
+section.hero h1.title {
+    font-size: 2.85rem;
+    line-height: 3.3rem;
+    color: var(--title);
+    margin-bottom: 1rem;
+}
+
+section.hero p.sub-title {
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    color: var(--sub-title);
+}
+
+section.hero .social-links {
+    margin-top: 1rem;
+}
+
+section.hero .social-link {
+    color: var(--sub-title);
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+section.hero .social-link:hover {
+    scale: 1.2;
+    color: var(--icon-hover);
+}
+
+/* ----------------------------------------------------------------------------
+-------------------------------{ right section }-------------------------------
+------------------------------------------------------------------------------- */
+section.hero .right-section {
+    width: 70%;
+    transform: translate(100px, 55px);
+}
+
+@media (max-width: 1600px) {
+    section.hero .right-section {
+        width: 100%;
+        transform: translate(100px, 55px);
+    }
+}
+
+@media (max-width: 1200px) {
+    section.hero .right-section {
+        width: 150%;
+        transform: translate(100px, 30px);
+    }
+}
+
+@media (max-width: 1000px) {
+    section.hero .right-section {
+        width: 180%;
+        transform: translate(100px, 30px);
+    }
+}
+
+
+/* ----------------------------------------------------------------------------
+-------------------------------{ Header Design }-------------------------------
+------------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    section.hero .right-section {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+    section.hero .avatar {
+        width: 12rem;
+    }
+
+    section.hero .parent-avatar span svg {
+        font-size: 1.6rem;
+        margin-left: -4px;
+    }
+
+    section.hero .social-link {
+        font-size: 1.7rem;
+    }
+}
